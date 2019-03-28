@@ -81,3 +81,4 @@ value表示接收的传入的参数类型
 在Annotaion配置注解中用@Component来表示一个通用注释,用于说明一个类是一个Spring容器管理的类,
 即该类已经拉入到Spring的管理中了;而@Controller,@Service,@Repository是@Component的细化
 ,这三个注解比@Component带有更多的语义,它们分别对应了控制层、服务层、持久层的类。
+祝学习进步!
