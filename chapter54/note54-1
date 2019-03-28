@@ -1,0 +1,83 @@
+***springMVC之注解编程***
+一.何谓注解编程
+1.注解编程简介
+就是运用注解方式在类,属性(字段)或方法等上添加指定的注解及相关的
+参数即可达到原生配置文件的效果
+格式:
+@Controller
+public class MyController{
+   @RequestMapping("/hqy")
+   public ModelAndView(HttpServletRequest req,HttpServletResponse resp){
+      ModelAndView mv=new ModelAndView();
+      mv.addObject("msg","真逗啊");
+      mv.setViewName("/WEB-INF/play.jsp");
+   return mv;
+   }
+}
+说明:
+(1)掌握注解编程,可以与原生态的方式进行比较,掌握不同注解的使用方式与场合
+(2)其实通过传递参数的方式,原生的Controller也能实现不同的请求
+2.注解编程的作用
+简化编码,操作方便;springmvc中可以在一个控制器中指定多个方法为映射对象(对应的url)
+二.springMVC常用的注解
+1.用在类或方法上的
+(1)@Controller,将一个类声明为控制器类,实现前后端交互
+(2)@RequestMapping,在一个类或方法上声明网络路径及可执行的url
+(3)@AutoWired,用在属性(字段)上,代替get/set方法,它是springMVC
+框的注解,以属性类型为参照注入bean;如果想使用按照名称来装配,可以结合@Qualifier注解一起使用
+@Autowired
+@Qualifier("userDao")
+private UserDao userDao; 
+(4)@Resourse,类似于@AutoWired,它是java自己的注解,以属性
+名称为参照注入bean,可以使用
+(5)@Service,注入dao
+(6)@ResponseBody,用于方法上,一般返回一个json字符串
+也就是当注解的方法返回字符串时将自动转换为json格式的
+比如:
+@ResponseBody
+public String show(){
+   String str="{\"name\":\"tom\"}";
+   return str;
+}
+(7)@Repository,用于实体类对应的Dao层,用在Dao的实现类上,对数据库进行操作
+(8)@ModelAttribute和 @SessionAttributes
+@ModelAttribute代表该Controller的所有方法在调用前,先执行此@ModelAttribute方法,
+可用于注解和方法参数中,可以把这个@ModelAttribute特性,应用在BaseController当中,
+所有的Controller继承BaseController,即可实现在调用Controller时,
+先执行@ModelAttribute方法。
+@SessionAttributes即将值放到session作用域中,写在class上面
+参考实例使用 @ModelAttribute和 @SessionAttributes传递和保存数据
+2.作为参数的注解
+(1)参数变量@requestParam
+主要用于在SpringMVC后台控制层获取参数,类似一种是request.getParameter("name"),
+它有三个常用参数:defaultValue="10",required=false,value="isApp"
+defaultValue表示设置默认值,required为boolean值,表示是否是必须要传入的参数,
+value表示接收的传入的参数类型
+(2)路径变量@pathVariable
+用于将请求URL中的模板变量映射到功能处理方法的参数上,即取出uri模板中的变量作为参数
+格式:
+@RequestMapping(value="/user/{userId}/roles/{roleId}",method=RequestMethod.GET)  
+ public String play(@PathVariable("userId") String userId,  
+    @PathVariable("roleId") String roleId){
+}
+(3)@ModelAttribute
+说明:大部分的注解都有参数,可以声明更多功能
+比如:
+  @Controller
+  public class Hqy{
+   @RequestMapping(value="/play",method="post")
+   public ModelAndView(xxx,xxx){
+         return null;
+       }
+}
+三.几个注解的区别
+@Controller,@Service,@repository,@Component区别
+修饰类都表示该类加入到了spring容器中了
+1.@controller控制器(注入服务)
+2.@service服务(注入dao)
+3.@repository dao(实现dao访问)
+4.@component(把普通bean实例化到spring容器中,相当于配置文件中的<bean id="" class=""/>）
+注意:除了1有特别的意义,234的注解主要是为了mvc分层(234都具有对象注册到spring容器的作用)
+在Annotaion配置注解中用@Component来表示一个通用注释,用于说明一个类是一个Spring容器管理的类,
+即该类已经拉入到Spring的管理中了;而@Controller,@Service,@Repository是@Component的细化
+,这三个注解比@Component带有更多的语义,它们分别对应了控制层、服务层、持久层的类。
