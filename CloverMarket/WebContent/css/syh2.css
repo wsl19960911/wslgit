@@ -1,0 +1,429 @@
+/****商品展示goods7*****/
+
+.content>.goods7 {
+	height: 450px;
+}
+
+
+/******left********/
+
+.content>.goods7>.goods7_left {
+	width: 300px;
+	height: 450px;
+	background: url(../pngj/qqad.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	float: left;
+	color: white;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.content>.goods7>.goods7_left>p[title=""] {
+	/*在此再次设置优先级比上边的高;普通光标*/
+	cursor: initial;
+}
+
+.content>.goods7>.goods7_left>p {
+	padding: 0px 10px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.content>.goods7>.goods7_left>.food_in {
+	margin-top: 278px;
+}
+
+
+/*通用属性*/
+
+.content>.goods7>.goods7_left>p>a {
+	font-size: 18px;
+	color: white;
+}
+
+.content>.goods7>.goods7_left>p>button {
+	width: 90px;
+	height: 30px;
+	border: 1px solid #bbb;
+	background-color: rgba(255, 255, 255, 0.1);
+	outline: medium;
+	color: white;
+	cursor: pointer;
+}
+
+.content>.goods7>.goods7_left>p>button:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/*******mid******/
+
+.content>.goods7>.goods7_mid {
+	/*总宽高600x450*/
+	width: 596px;
+	height: 442px;
+	border-top: 4px solid #B96131;
+	border-right: 4px solid #A2592F;
+	border-bottom: 4px solid #6B462B;
+	background-color: white;
+	float: left;
+}
+
+
+/**goods7中间上部*/
+
+.goods7>.goods7_mid>.mid_top {
+	width: 100%;
+	height: 50%;
+}
+
+.goods7>.goods7_mid>.mid_top>* {
+	float: left;
+}
+
+
+/*中顶左*/
+
+.goods7_mid>.mid_top>.mid_top_left {
+	width: 400px;
+	height: 100%;
+}
+
+.goods7_mid>.mid_top>.mid_top_left>a {
+	display: inline-block;
+	width: 400px;
+	height: 100%;
+	font-size: 18px;
+	color: black;
+}
+
+.mid_top>.mid_top_left>a>span {
+	float: left;
+	width: 200px;
+	height: 100%;
+	text-align: center;
+}
+
+.mid_top_left>a>span>p {
+	text-align: left;
+	/*p没有明确设置宽度,则设置padding不会撑大盒子*/
+	padding-left: 20px;
+}
+
+.mid_top_left>a>span>p.one {
+	margin-top: 60px;
+}
+
+.mid_top_left>a>span>p.two {
+	color: #ccc;
+	font-size: 16px;
+}
+
+.mid_top>.mid_top_left>a>span>img {
+	width: 120px;
+	vertical-align: middle;
+	margin-top: 50px;
+}
+
+
+/*中间顶右*/
+
+.mid_top>.mid_top_right {
+	/*外部轮廓线要设到div上,不要在a上*/
+	outline: 1px solid #B96131;
+}
+
+.mid_top>.mid_top_right>a {
+	display: inline-block;
+	width: 196px;
+	height: 221px;
+	font-size: 16px;
+	color: black;
+}
+
+.mid_top>.mid_top_right>a>p {
+	padding-left: 20px;
+	font-size: 14px;
+}
+
+.mid_top>.mid_top_right>a>p.one {
+	margin-top: 20px;
+}
+
+.mid_top>.mid_top_right>a>p.two {
+	color: #ccc;
+}
+
+.mid_top>.mid_top_right>a>img {
+	height: 70px;
+	margin-top: 70px;
+	margin-left: 80px;
+}
+
+
+/**中间下部**/
+
+.goods7_mid>.mid_bottom>div {
+	width: 198px;
+	height: 221px;
+	float: left;
+	border-top: 1px solid #B96131;
+}
+
+
+/*设置中间所有的div共同的hover属性,就是放大*/
+
+.content>.goods7>.goods7_mid>div>div {
+	position: relative;
+	transition: 0.3s all;
+}
+
+
+/*hover的时候有层在其它层之下*/
+
+.content>.goods7>.goods7_mid>div>div:hover {
+	border: none;
+	outline: medium;
+	transform: scale(1.04);
+	box-shadow: 0px 0px 2px 2px #ddd;
+	background: white;
+	/*动态修改层叠顺序,让其大*/
+	z-index: 4;
+}
+
+.goods7_mid>.mid_bottom>div.mid_bottom_mid {
+	border-left: 1px solid #B96131;
+	border-right: 1px solid #B96131;
+	width: 200px;
+}
+
+.goods7_mid>.mid_bottom>.mid_tottom_right {
+	width: 194px;
+}
+
+.goods7_mid>.mid_bottom>div>a {
+	display: inline-block;
+	width: 198px;
+	height: 221px;
+	color: black;
+	font-size: 14px;
+}
+.goods7_mid>.mid_bottom>div>a>p.one {
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+.goods7_mid>.mid_bottom>div>a>p.two {
+	color: #ccc;
+	font-size: 14px;
+	margin-left: 20px;
+}
+
+.goods7_mid>.mid_bottom>div>a>img {
+	height: 100px;
+	margin-top: 40px;
+	margin-left: 60px;
+}
+
+
+/*****goods7_right*****/
+
+.content>.goods7>.goods7_right {
+	width: 300px;
+	height: 450px;
+	float: left;
+}
+
+.content>.goods7>.goods7_right>div {
+	width: 300px;
+	height: 150px;
+}
+
+.content>.goods7>.goods7_right>div>div {
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+.content>.goods7>.goods7_right>div>div>a{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	text-align: right;
+}
+.content>.goods7>.goods7_right>div>div>a>p{
+	/*再将p元素对齐方式调整回来,并添加padding*/
+padding-left: 20px;
+text-align: left;
+}
+
+.content>.goods7>.goods7_right>.goods7_right_top>.left {
+	background-color: papayawhip;
+}
+
+.content>.goods7>.goods7_right>.goods7_right_top>.right {
+	background-color: lightblue;
+}
+
+.content>.goods7>.goods7_right>.goods7_right_mid>.left {
+	background-color:ghostwhite;
+}
+
+.content>.goods7>.goods7_right>.goods7_right_mid>.right {
+	background-color: lightgrey;
+}
+
+.content>.goods7>.goods7_right>.goods7_right_bottom>.left {
+	background-color:lightcyan;
+}
+
+.content>.goods7>.goods7_right>.goods7_right_bottom>.right {
+	background-color:lightpink;
+}
+
+.goods7>.goods7_right>div>div>a {
+	font-size: 16px;
+	color: black;
+	overflow: hidden;
+}
+
+.goods7>.goods7_right>div>div>a>p:nth-of-type(1) {
+	font-size: 16px;
+	margin-top: 10px;
+	padding-left: 10px;
+	color: lightcoral;
+}
+
+.goods7>.goods7_right>div>div>a>p:nth-of-type(2) {
+	text-decoration: underline;
+	color: #888;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+.goods7>.goods7_right>div>div>a>img {
+	width: 80px;
+	margin-top: 10px;
+	transition: 0.3s all;
+	/*先设置到右边*/
+	margin-right: -8px;
+}
+
+.goods7>.goods7_right>div>div>a>img:hover {
+	/*再向左移一点*/
+	margin-right: -2px;
+}
+/****goods8adbar****/
+.goods8{
+	height: 100px;
+	margin: 10px auto;
+}
+.goods8>a{
+	display: block;
+	width: 1200px;	height: 100px;
+}
+.goods8>a>img{
+	width: 1200px;
+	height: 100px;
+}
+/***goods9待定****/
+
+
+/*组合类main footerline到底部的提示*/
+
+.footerline {
+	width: 1200px;
+	margin: 0 auto;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	/*outline: 1px solid red;*/
+}
+
+.footerline>span {
+	display: inline-block;
+	width: 100px;
+	border-top: 1px solid #aaa;
+	/*跟其它文本及行内元素或行内块元素上下居中对齐*/
+	vertical-align: middle;
+}
+
+
+/******************页脚样式的实现*******************/
+
+footer {
+	width: 100%;
+	background-color: white;
+	/*不设置固定高度height: 500px;*/
+	/*border: 1px solid green;*/
+}
+
+footer>.tell {
+	text-align: center;
+	/*共100px*/
+	height: 80px;
+	padding-top: 20px;
+}
+
+footer>.tell>a:not(.nn) {
+	margin-right: 80px;
+}
+
+.tell>a>img {
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.lineFooter {
+	width: 1200px;
+	border-bottom: 1px solid #ccc;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+/*说明部分,此处只是实现了效果;还可继续优化*/
+
+.explain>ul {
+	width: 300px;
+	float: left;
+	font-size: 22px;
+	text-align: center;
+	/*outline: 1px solid red;*/
+}
+
+.explain>ul>li {
+	width: 90px;
+	height: 30px;
+	/*文字左对齐*/
+	text-align: left;
+	/*加个外部轮廓线看效果outline: 1px solid red;*/
+	/*居中*/
+	margin: 0 auto;
+	line-height: 30px;
+}
+
+.explain>ul>li>a {
+	/*浮动后变成行内块元素*/
+	float: left;
+	/*此处要注意宽度别太大否则超过窗口了*/
+	width: 200px;
+	font-size: 18px;
+}
+
+.about {
+	width: 100%;
+	padding-top: 60px;
+}
+
+.about>p {
+	width: 1200px;
+	height: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.about>p>a:not(.noa) {
+	margin-right: 10px;
+}

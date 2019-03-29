@@ -1,0 +1,710 @@
+/*代码还可优化,以下特别要注意元素的层次关系及取名规则*/
+ /* 好多商品展示页,选择器代码有点长,可以优化哦*/
+.content {
+	width: 100%;
+}
+
+
+/*商品展示一*/
+
+.content>.goods1 {
+	height: 150px;
+	/*outline: 4px solid green;*/
+	margin-top: 10px;
+}
+
+
+/*元素一旦应用了浮动,则其将脱离原来的位置*/
+
+.content>.goods1>.left {
+	width: 210px;
+	height: 150px;
+	background: #EC3639;
+	float: left;
+	text-align: center;
+}
+
+.content>.goods1>.left>p:nth-of-type(1) {
+	color: white;
+	font-size: 26px;
+	font-family: "微软雅黑";
+}
+
+.content>.goods1>.left>p:nth-of-type(3) {
+	margin: 10px;
+	height: 40px;
+}
+
+.content>.goods1>.left>p:nth-of-type(3)>button {
+	outline: medium;
+	width: 40px;
+	height: 30px;
+	background-color: black;
+	border: none;
+	font-size: 18px;
+	color: white;
+	font-family: "微软雅黑";
+}
+
+.content>.goods1>.left>p:nth-of-type(4)>a:link {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+}
+
+.content>.goods1>.left>p:nth-of-type(4)>a:visited {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+}
+
+.content>.goods1>.left>p:nth-of-type(4)>a:hover {
+	text-decoration: underline;
+	color: white;
+	font-size: 18px;
+}
+
+
+/*右边的样式*/
+
+.content>.goods1>.right {
+	width: 990px;
+	height: 150px;
+	background-color: blue;
+	background: white;
+	float: right;
+	position: relative;
+	font-size: 20px;
+	/*子元素多余部分藏起来*/
+	overflow: hidden;
+}
+
+.content>.goods1>.right>button {
+	position: absolute;
+	width: 30px;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	outline: medium;
+	border: none;
+	transition: 0.2s all;
+	/*设置层叠顺序*/
+	z-index: 4;
+	display: none;
+}
+
+/*在js中根据不同情况显示悬浮按钮*/
+/*设置动态效果*/
+.content>.goods1>.right>button:active {
+	width: 40px;
+}
+
+.content>.goods1>.right>button:nth-of-type(1) {
+	top: 50px;
+	left: 5px;
+}
+
+.content>.goods1>.right>button:nth-of-type(2) {
+	top: 50px;
+	right: 5px;
+}
+
+.content>.goods1>.right>div {
+	height: 150px;
+	width: 3300px;
+	position: absolute;
+	top: 0px;
+	left:0px;
+	transition: 1s left;
+	/*background-color: goldenrod;*/
+}
+
+.content>.goods1>.right>div>div {
+	float: left;
+}
+
+/*找到所有动态生成的元素并设置样式*/
+.content>.goods1>.right>div>div>span{
+	display: inline-block;
+	width: 160px;
+	height: 120px;
+	font-size: 16px;
+}
+
+.content>.goods1>.right>div>div>span>p:nth-of-type(2) {
+	font-size: 18px;
+	color: red;
+	margin-top: 20px;
+}
+.content>.goods1>.right>div>div>img{
+	height: 120px;
+	/*设置一个宽度,先不要占满;下边要动态改变大小*/
+	width: 145px;
+	float: right;
+	line-height: 70px;
+	transition: 0.2s all;
+	cursor: pointer;
+}
+/*在图片上悬浮时动态改变图片宽度*/
+.content>.goods1>.right>div>div>img:hover {
+	width: 160px;
+}
+
+
+/*商品2的样式*/
+
+.content>.goods2 {
+	height: 400px;
+	/*已经解决外边距问题*/
+	margin-top: 10px;
+}
+
+.content>.goods2>.goods2_left {
+	width: 270px;
+	height: 400px;
+	background: url(../jpeg/mm2.jpg) no-repeat;
+	background-size: cover;
+	float: left;
+	text-align: center;
+}
+
+.content>.goods2>.goods2_left>a {
+	/*转换为行内块元素*/
+	display: inline-block;
+	width: 200px;
+	height: 150px;
+	background-color: rgba(255, 255, 255, 0.6);
+	margin-top: 230px;
+	color: black;
+}
+
+.content>.goods2>.goods2_left>a:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.content>.goods2>.goods2_left>a>p:nth-of-type(1) {
+	font-size: 26px;
+	margin-top: 30px;
+}
+
+.content>.goods2>.goods2_left>a>p:nth-of-type(2) {
+	width: 50px;
+	border-top: 1px solid black;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.content>.goods2>.goods2_middle {
+	width: 530px;
+	height: 400px;
+	margin: 0px 10px;
+	background-color: white;
+	float: left;
+	border-top: 1px solid red;
+	margin-top: -1px;
+}
+
+.content>.goods2>.goods2_middle>.middle_top {
+	text-align: center;
+	height: 50px;
+}
+
+.content>.goods2>.goods2_middle>.middle_top>a {
+	display: inline-block;
+	margin-top: -4px;
+}
+
+.content>.goods2>.goods2_middle>.middle_bottom>.left {
+	width: 260px;
+	height: 350px;
+	/*margin-right: 10px;*/
+	float: left;
+	border-right: 1px solid #ccc;
+}
+
+.content>.goods2>.goods2_middle>.middle_bottom>.left>div {
+	/*高度不要设置为父元素高度*/
+	height: 230px;
+	font-size: 20px;
+	font-weight: bold;
+	background: url(../jpeg/jxtu1.png) no-repeat;
+	background-position-x: center;
+	background-position-y: 8px;
+	padding-top: 10px;
+}
+
+.content>.goods2>.goods2_middle>.middle_bottom>.left>div>a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #e00;
+}
+
+.content>.goods2>.goods2_middle>.middle_bottom>.right {
+	width: 260px;
+	height: 350px;
+	/*background: grey;*/
+	float: right;
+}
+
+.goods2>.goods2_middle>.middle_bottom>.right>div {
+	width: 100%;
+	height: 33.33%;
+}
+
+.goods2>.goods2_middle>.middle_bottom>.right>div>a {
+	color: #ccc;
+	display: inline-block;
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+	transition: 0.3s all;
+}
+
+.goods2>.goods2_middle>.middle_bottom>.right>div>a>p:nth-of-type(1) {
+	color: red;
+	font-size: 18px;
+}
+
+.goods2_middle>.middle_bottom>.right>div>a:hover {
+	background-position-x: 130px;
+}
+
+.goods2_middle>.middle_bottom>.right>.one>a {
+	background: url(../jpeg/a.jpg) no-repeat;
+	background-size: 100px 100px;
+	background-position: bottom;
+	background-position-x: 140px;
+}
+
+.goods2_middle>.middle_bottom>.right>.two>a {
+	background: url(../jpeg/b.jpg) no-repeat;
+	background-size: 100px 100px;
+	background-position: bottom;
+	background-position-x: 140px;
+}
+
+.goods2_middle>.middle_bottom>.right>.three>a {
+	background: url(../jpeg/c.jpg) no-repeat;
+	background-size: 100px 100px;
+	background-position: bottom;
+	background-position-x: 140px;
+}
+
+
+/*右边的导航*/
+
+.content>.goods2>.goods2_right {
+	width: 360px;
+	padding: 0px 10px;
+	height: 400px;
+	float: right;
+	background-color: white;
+}
+
+
+/*起名字一定不要与通用的有冲突*/
+
+.content>.goods2>.goods2_right>.one {
+	width: 360px;
+	height: 50px;
+	border-top: 1px solid red;
+	text-align: center;
+}
+
+
+/*也有跳转*/
+
+.content>.goods2>.goods2_right>.one>a {
+	display: inline-block;
+	margin-top: -4px;
+}
+
+.content>.goods2>.goods2_right>.two {
+	height: 230px;
+	width: 360px;
+}
+
+
+/*通过清除浮动去掉行内块外边距*/
+
+.content>.goods2>.goods2_right>.two>* {
+	float: left;
+}
+
+.content>.goods2>.goods2_right>.two>a {
+	display: inline-block;
+	height: 230px;
+	width: 180px;
+	background: url(../jpeg/hotgoods1.png)no-repeat;
+	background-position-y: bottom;
+	background-position-x: 50px;
+	color: #ccc;
+	font-size: 14px;
+	border-right: 1px solid #ccc;
+	transition: 0.2s all;
+}
+
+.content>.goods2>.goods2_right>.two>a:hover {
+	background-position-x: 40px;
+}
+
+.content>.goods2>.goods2_right>.two>a>p:nth-of-type(1) {
+	color: black;
+	font-size: 18px;
+}
+
+
+/*右边商品*/
+
+.content>.goods2>.goods2_right>.two>span {
+	display: inline-block;
+	height: 230px;
+	width: 168px;
+	padding-left: 10px;
+}
+
+.content>.goods2>.goods2_right>.two>span>a {
+	display: inline-block;
+	height: 115px;
+	width: 168px;
+	color: #ccc;
+	font-size: 14px;
+	transition: 0.2s all;
+}
+
+.content>.goods2>.goods2_right>.two>span>a:nth-of-type(1) {
+	background: url(../jpeg/hotg1.png) no-repeat;
+	background-position: right;
+}
+
+.content>.goods2>.goods2_right>.two>span>a:nth-of-type(2) {
+	background: url(../jpeg/hotg2.png) no-repeat;
+	background-position: right;
+}
+
+.content>.goods2>.goods2_right>.two>span>a>p:nth-of-type(1) {
+	color: black;
+	font-size: 18px;
+}
+
+
+/*注意要放在背景图片加载之后*/
+
+.content>.goods2>.goods2_right>.two>span>a:hover {
+	background-position-x: 80px;
+}
+
+
+/*下边商品展示*/
+
+.content>.goods2>.goods2_right>.three {
+	width: 360px;
+	height: 120px;
+	text-align: center;
+	/*outline: 1px solid grey;*/
+}
+
+.content>.goods2>.goods2_right>.three>a {
+	display: inline-block;
+	width: 175px;
+	height: 110px;
+	padding-top: 10px;
+	transition: 0.4s all;
+}
+
+.content>.goods2>.goods2_right>.three>a>p {
+	text-align: left;
+	color: red;
+	font-size: 14px;
+}
+
+.content>.goods2>.goods2_right>.three>a:nth-of-type(1) {
+	background: url(../jpeg/hotg3.png) no-repeat;
+	background-position: right bottom;
+	background-color: rgba(255, 0, 0, 0.1);
+}
+
+.content>.goods2>.goods2_right>.three>a:nth-of-type(2) {
+	background: url(../jpeg/hotg4.png) no-repeat;
+	background-position: right bottom;
+	background-color: rgba(255, 0, 0, 0.1);
+}
+
+.content>.goods2>.goods2_right>.three>a:hover {
+	background-position-x: center;
+}
+
+
+/*商品3领券*/
+
+.content>.goods3 {
+	height: 110px;
+	/*上下空10px水平居中,这种操作要理解哦*/
+	margin: 10px auto;
+	background: url(../jpeg/lingquan.jpg) no-repeat;
+	background-size: cover;
+}
+
+.content>.goods3>a {
+	float: left;
+}
+
+.content>.goods3>a:nth-of-type(1) {
+	display: inline-block;
+	width: 160px;
+	height: 110px;
+	color: white;
+}
+
+.content>.goods3>a:nth-of-type(1)>p {
+	padding-left: 20px;
+	margin-top: 10px;
+	font-size: 14px;
+	transition: 0.3s all;
+}
+
+.content>.goods3>a:nth-of-type(1):hover>.go1 {
+	/*margin-left: 10px;*/
+	padding-left: 26px;
+	color: #eee;
+}
+
+.content>.goods3>a:nth-of-type(1)>p:nth-of-type(1) {
+	font-size: 20px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+
+.content>.goods3>a:nth-of-type(1)>p:nth-of-type(2) {
+	color: #ccc;
+	font-family: arial;
+}
+
+
+/*中间部分*/
+
+.content>.goods3>a:not(.last):nth-of-type(n+2) {
+	display: inline-block;
+	width: 202px;
+	height: 110px;
+	/*outline: 1px solid green;*/
+}
+
+
+/*共同的属性*/
+
+.goods3>a:not(.last):nth-of-type(n+2)>div {
+	padding: 0px 20px;
+	color: #888;
+	font-size: 13px;
+}
+
+
+/*div1与div2样式*/
+
+
+/*div1*/
+
+.goods3>a:not(.last):nth-of-type(n+2)>div:nth-of-type(1) {
+	height: 80px;
+}
+
+.goods3>a:not(.last):nth-of-type(n+2)>div:nth-of-type(1)>span:nth-of-type(1) {
+	display: inline-block;
+	width: 50%;
+	height: 80px;
+	float: left;
+	font-size: 32px;
+	color: red;
+	font-family: arial;
+	font-weight: bold;
+	line-height: 80px;
+	/*background-color:black*/
+}
+
+/**选择器代码有点长,可以优哦**/
+.goods3>a:not(.last):nth-of-type(n+2)>div:nth-of-type(1)>span:nth-of-type(2) {
+	display: inline-block;
+	width: 50%;
+	height: 60px;
+	float: left;
+	padding-top: 20px;
+}
+
+.goods3>a:not(.last):nth-of-type(n+2)>div:nth-of-type(1)>span:nth-of-type(2)>p:nth-of-type(1) {
+	font-size: 18px;
+	color: red;
+}
+
+
+/*div2*/
+
+.goods3>a:not(.last):nth-of-type(n+2)>div:nth-of-type(2) {
+	height: 30px;
+	text-align: center;
+}
+
+.goods3>a:not(.last):nth-of-type(n+2)>div:nth-of-type(2):hover {
+	color: red;
+}
+
+
+/*最后的a*/
+
+.content>.goods3>a:nth-last-of-type(1) {
+	display: inline-block;
+	width: 30px;
+	height: 100px;
+	padding-top: 10px;
+	color: #ccc;
+	text-align: center;
+}
+
+.content>.goods3>a:nth-last-of-type(1)>span {
+	display: inline-block;
+	width: 20px;
+	margin-top: 12px;
+	font-size: 12px;
+}
+
+.content>.goods3>a:nth-last-of-type(1)>span:hover {
+	color: grey;
+}
+
+
+/*商品4的样式,轮播图*/
+
+.content>.goods4Lunbo {
+	height: 220px;
+	background-color: white;
+}
+
+.content>.goods4Lunbo>.lunbo_Top {
+	height: 30px;
+	text-align: right;
+	position: relative;
+	border-top: 1px solid red;
+}
+
+.goods4Lunbo>.lunbo_Top>a>img {
+	position: absolute;
+	width: 170px;
+	top: -4px;
+	left: 515px;
+}
+/*轮播小雨滴*/
+.goods4Lunbo>.lunbo_Top>button {
+	width: 10px;
+	height: 10px;
+	/*此处边框设置为透明,但是也要占位置,在js中也要一样设置*/
+	border:2px solid transparent;
+	outline: medium;
+	border-radius: 50%;
+	background-color: grey;
+	margin-right: 8px;
+}
+
+
+/*无缝轮播图*/
+.content>.goods4Lunbo>.lunbo_goods{
+	height: 190px;
+	width: 100%;
+}
+/*设置共同的属性*/
+.content>.goods4Lunbo>.lunbo_goods>div{
+	float: left;
+}
+.goods4Lunbo>.lunbo_goods>.btn_left,
+.goods4Lunbo>.lunbo_goods>.btn_right{
+	width: 60px;
+	height: 190px;
+	text-align: center;
+	line-height: 160px;
+}
+.goods4Lunbo>.lunbo_goods>div>button{
+	font-size: 28px;
+	font-family:'微软雅黑';
+	font-weight: bold;
+	color: grey;
+	width: 40px;
+	height: 40px;
+	border: none;
+	outline: medium;
+	cursor: pointer;
+	border-radius: 50%;
+	/*按钮不要背景也要设为none,因为有默认的*/
+	background:none;
+	transition: 0.2s all;
+}
+.goods4Lunbo>.lunbo_goods>div>button:active{
+	background-color:rgba(255,0,0,0.1);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: white;
+}
+.goods4Lunbo>.lunbo_goods>.lunbo_main{
+	width: 1080px;
+	height: 190px;
+	/*设置定位,子元素也设置,才有位移动画效果*/
+	position: relative;
+	/*background-color: grey;*/
+    /*隐藏多出的子元素*/
+    overflow: hidden;
+}
+/*设置动态生成的div的定位属性*/
+.content>.goods4Lunbo>.lunbo_goods>.lunbo_main>div{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	transition: 0.5s all;
+}
+/*设置每个轮播图片的过渡效果,使用缩放比较好*/
+.content>.goods4Lunbo>.lunbo_goods>.lunbo_main>div>a>img{
+   /*设置过渡效果;此处设置图片宽高没效果,可以用缩放scale*/
+   transition:0.2s all;
+}
+.content>.goods4Lunbo>.lunbo_goods>.lunbo_main>div>a>img:hover{
+ /*此处设置缩放过渡效果很好;改变宽高时没有过渡效果*/
+  transform: scale(1.1);
+}
+/*广告条*/
+
+.content>.goods5 {
+	height: 100px;
+	/*上下各空10px水平居中*/
+	margin: 10px auto;
+	/*设置相对定位,方便子元素去设置绝对定位*/
+	position: relative;
+}
+
+.content>.goods5>a>img {
+	width: 100%;
+	height: 100px;
+}
+/*全球进口*/
+.content>.goods6{
+	height: 50px;
+	line-height: 40px;
+}
+.content>.goods6>a{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color:#555;
+}
+.content>.goods6>a>button{
+	width: 20px;
+	height: 20px;
+	border: none;
+	border-radius: 50%;
+	background: gray;
+	color: white;
+}
+
+
+

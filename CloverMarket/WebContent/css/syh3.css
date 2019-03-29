@@ -1,0 +1,611 @@
+.goods9 {
+	/*w1200*/
+	height: 430px;
+	background-color: white;
+}
+
+
+/*左边*/
+
+.goods9>.goods9_left {
+	width: 250px;
+	height: 430px;
+	/*outline: 1px solid red;*/
+	/*浮动以后自动变成行内块元素*/
+	float: left;
+	background-color: #F8A463;
+	color: white;
+}
+
+.goods9_left>.goods9_left_one {
+	font-size: 26px;
+	text-align: center;
+	font-family: "微软雅黑";
+	margin-top: 10px;
+}
+
+.goods9_left>.goods9_left_two {
+	text-align: center;
+	font-family: "微软雅黑";
+	border-top: 1px solid white;
+	width: 142px;
+	margin: 0px auto;
+}
+
+
+/*******层叠轮播图*******/
+
+.goods9_left>.goods9_left_three {
+	width: 200px;
+	height: 260px;
+	/*background: white;*/
+	/*上下留白左右居中*/
+	margin: 0px auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/*border: 1px solid pink;*/
+	position: relative;
+}
+
+
+/*a标签最上一层的轮播图片*/
+
+.goods9_lunbo {
+	display: inline-block;
+	width: 200px;
+	height: 210px;
+	background-color: white;
+	border-radius: 6px;
+	text-align: center;
+	padding-top: 20px;
+	/*a元素设置定位后自动转成了行内块元素,可以设置高宽*/
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 3;
+}
+
+
+/*最上层轮播图中的标题一*/
+
+.goods9_lunbo>.lunbo_title1 {
+	color: red;
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+
+
+/*最上层轮播图中的标题二*/
+
+.goods9_lunbo>.lunbo_title2 {
+	color: black;
+	font-size: 16px;
+}
+
+.goods9_lunbo>.lunbo_img {
+	height: 130px;
+	margin-top: 20px;
+}
+
+
+/*中间的图形*/
+
+.goods9_lunbo1 {
+	display: inline-block;
+	position: absolute;
+	width: 180px;
+	height: 200px;
+	/*background-color: #F9C499;*/
+	background-color: rgba(250, 219, 193, 0.4);
+	border-radius: 6px;
+	left: 10px;
+	top: 20px;
+	z-index: 2;
+}
+
+
+/*最底的图*/
+
+.goods9_lunbo2 {
+	display: inline-block;
+	position: absolute;
+	width: 160px;
+	height: 190px;
+	/*background-color:#F8B47F;*/
+	background-color: rgba(250, 219, 193, 0.3);
+	border-radius: 6px;
+	left: 20px;
+	top: 10px;
+	z-index: 1;
+}
+
+
+/*按钮*/
+
+.goods9_left>.goods9_left_four {
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+
+.goods9_left_four>button {
+	border: none;
+	outline: medium;
+	width: 28px;
+	height: 24px;
+	font-size: 14px;
+	color: white;
+	/*背景透明*/
+	background-color: transparent;
+}
+
+.goods9_left_four>.left_arrow {
+	cursor: pointer;
+}
+
+.goods9_left_four>.right_arrow {
+	cursor: pointer;
+}
+
+.goods9_left>.goods9_left_five {
+	height: 50px;
+	/*outline: 1px solid red;*/
+	line-height: 46px;
+	/*透明颜色背景*/
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.goods9_left_five>img {
+	margin-left: 10px;
+	margin-right: 15px;
+	vertical-align: middle;
+}
+
+.goods9_left_five>a {
+	color: white;
+	margin-left: 15px;
+}
+
+
+/*中间*/
+
+.goods9>.goods9_mid {
+	width: 750px;
+	height: 430px;
+	/*outline: 1px solid green;*/
+	float: left;
+}
+
+.goods9_mid_tab {
+	width: 750px;
+	height: 430px;
+	/*合并表格单元格的边框*/
+	border-collapse: collapse;
+	/*去除表格外边框*/
+	border: none;
+}
+
+
+/*****第一行****/
+
+.goods9_mid_tab>tbody>.tab_row1 {
+	height: 40px;
+}
+
+.goods9_mid_tab>tbody>tr>td {
+	/*设置表格的各属性*/
+	/*border-color: pink;
+	border-width: 1px;
+	border-style: solid;*/
+	border: 1px solid #ccc;
+	width: 150px;
+}
+
+.goods9_mid_tab>tbody>.tab_row1>td {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.goods9_mid_tab>tbody>.tab_row2,
+.goods9_mid_tab>tbody>.tab_row3 {
+	height: 195px;
+}
+
+.goods9_mid_tab>tbody>.tab_row1>td {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.goods9_mid_tab>tbody>.tab_row1>td>a {
+	margin: 0px 10px;
+	font-size: 12px;
+	color: #888;
+}
+
+.goods9_mid_tab>tbody>.tab_row1>td>a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+.goods9_mid_tab>tbody>.tab_row1>td>span:after {
+	content: '|';
+	color: #ccc;
+	font-size: 12px;
+}
+
+
+/****第二行******/
+
+.goods9_mid_tab>tbody>.tab_row2>.td_first {
+	border-left: none;
+}
+
+.goods9_mid_tab>tbody>.tab_row2>.td_last {
+	border-right: none;
+}
+
+.goods9_mid_tab>tbody>.tab_row2>td>a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	/*outline: 1px solid red;*/
+	color: black;
+}
+
+.goods9_mid_tab>tbody>.tab_row2>td>a>.pp1 {
+	padding-left: 20px;
+	font-size: 16px;
+	margin-top: 20px;
+	color: grey;
+}
+
+.goods9_mid_tab>tbody>.tab_row2>td>a>.pp2 {
+	padding-left: 20px;
+	font-size: 14px;
+	color: red;
+}
+
+.goods9_mid_tab>tbody>.tab_row2>td>a>.mm_img {
+	height: 100px;
+	margin-left: 120px;
+	margin-top: 20px;
+}
+
+
+/*图片的动态效果*/
+
+.goods9_mid_tab>tbody>.tab_row2>td>a>img {
+	transition: 0.2s all;
+}
+
+.goods9_mid_tab>tbody>.tab_row2>td>a>img:hover {
+	margin-left: 110px;
+	/*补偿10px*/
+	padding-right: 10px;
+}
+
+
+/******第三行*****/
+
+.goods9_mid_tab>tbody>.tab_row3>.td_first {
+	border-left: none;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>.td_last {
+	border-right: none;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td {
+	border-bottom: none;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td>a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	/*outline: 1px solid red;*/
+	color: black;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td>a>.pp1 {
+	padding-left: 20px;
+	font-size: 16px;
+	margin-top: 20px;
+	color: grey;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td>a>.pp2 {
+	padding-left: 20px;
+	font-size: 14px;
+	color: red;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td>a>.mm_img {
+	height: 100px;
+	margin-left: 120px;
+	margin-top: 20px;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td.td_last>a {
+	display: inline-block;
+	float: left;
+	width: 121px;
+	height: 62px;
+	text-align: center;
+	line-height: 62px;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td.td_last>.a1 {
+	border-bottom: 1px solid #ddd;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td.td_last>.a2 {
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td.td_last>.a4 {
+	border-left: 1px solid #ddd;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td.td_last>.a5 {
+	border-top: 1px solid #ddd;
+}
+
+.goods9_mid_tab>tbody>.tab_row3>td.td_last>.a6 {
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+
+/*图片样式*/
+
+.goods9_mid_tab>tbody>.tab_row3>td.td_last>a>img {
+	height: 40px;
+	vertical-align: middle;
+}
+
+
+/*图片的动态效果*/
+
+.goods9_mid_tab>tbody>.tab_row3>td>a>img {
+	transition: 0.2s all;
+}
+
+
+/*排除第三个单元格*/
+
+.goods9_mid_tab>tbody>.tab_row3>td:not(.td_last)>a>img:hover {
+	margin-left: 110px;
+	/*补偿10px*/
+	padding-right: 10px;
+}
+
+
+/*右边热门商品*/
+
+.goods9>.goods9_right {
+	width: 200px;
+	height: 430px;
+	/*outline: 1px solid black;*/
+	float: right;
+}
+
+
+/*热门标题样式*/
+
+.goods9_right_hot {
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+}
+
+
+/*a标签样式共5个*/
+
+.goods9_right12345 {
+	display: block;
+	width: 200px;
+	height: 78px;
+	font-size: 13px;
+}
+
+.goods9_right_left_div {
+	float: left;
+	width: 90px;
+	height: 78px;
+	text-align: center;
+	line-height: 78px;
+	/*outline: 1px solid black;*/
+}
+
+.goods9_right_left_div>img {
+	width: 70px;
+	height: 70px;
+	vertical-align: middle;
+}
+
+.goods9_hot_info {
+	float: left;
+	width: 110px;
+	height: 68px;
+	padding-top: 10px;
+	/*outline: 1px solid blue;*/
+}
+
+.goods9_hot_info>p {
+	height: 22px;
+	width: 110px;
+	/*也可以设置为em不允许出现半汉字截断*/
+	/*width: 8em;*/
+	/*自动隐藏文字*/
+	overflow: hidden;
+	/*强制不换行*/
+	white-space: nowrap;
+	/*文字隐藏后添加省略号*/
+	text-overflow: ellipsis;
+}
+
+
+/*商品价格样式*/
+
+.goods9_hot_info>p:nth-of-type(3) {
+	color: red;
+	font-size: 12px;
+}
+
+
+/******左右浮动导航按钮*****/
+
+.xiaoxue {
+	/**父元素用绝对定**/
+	position: absolute;
+	left: -60px;
+}
+
+.xiaoxue>.jump {
+	width: 50px;
+	height: 255px;
+	background-color: #F5F5F5;
+	/*固定定位,参照浏览窗口,不要设置left/right/bottom*/
+	position: fixed;
+	z-index: 8;
+	top: 400px;
+	display: none;
+}
+
+.jump>a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	background: white;
+	padding-top: 10px;
+}
+
+.jump>a:not(.jump_four) {
+	margin-bottom: 5px;
+}
+
+.jump>a>p {
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.jump>a:link {
+	text-decoration: none;
+	color: black;
+}
+
+.jump>a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.jump>.jump_one:hover {
+	text-decoration: none;
+	color: white;
+	background: #ED363A;
+}
+
+.jump>.jump_two:hover {
+	text-decoration: none;
+	color: white;
+	background: #BE6E3B;
+}
+
+.jump>.jump_three:hover {
+	text-decoration: none;
+	color: white;
+	background: #F8A463;
+}
+
+.jump>.jump_four:hover {
+	text-decoration: none;
+	color: white;
+	background: #6900B3;
+}
+
+
+/***右边的浮动导航栏***/
+
+.nav_right {
+	width: 50px;
+	/*高度随浏览窗口变化*/
+	height: 100%;
+	background: black;
+	color: white;
+	position: fixed;
+	right: 0;
+	/*设置层叠顺序*/
+	z-index: 10;
+}
+
+.nav_right_top {
+	width: 50px;
+	height: 250px;
+	/*background: pink;*/
+	position: absolute;
+	top: 160px;
+}
+
+.nav_right_bottom {
+	width: 50px;
+	height: 150px;
+	position: absolute;
+	/*定位到底部*/
+	bottom: 0;
+}
+
+.nav_right>div>a>img {
+	width: 24px;
+	vertical-align: middle;
+}
+/**右边浮动导航所有按钮样式***/
+.nav_right>div>a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	transition: 0.2s all;
+}
+/*注意优先级*/
+.nav_right>div>.nav_right_two{
+	height: 150px;
+	/*border: 1px solid red;*/
+}
+.nav_right_two>.cart_word{
+	display:block;
+	width: 20px;
+	height: 80px;
+	line-height: 30px;
+	/*background: pink;*/
+	margin: 0 auto;
+}
+.nav_right>div>a:hover {
+	background: #FF5C4D;
+}
+
+
+/*按钮特特效*/
+
+.nav_right_one {
+	position: relative;
+}
+
+.nav_right_one>.one_center {
+	position: absolute;
+	width: 0px;
+	height: 50px;
+	text-align: center;
+	background: #FF5C4D;
+	display: none;
+}

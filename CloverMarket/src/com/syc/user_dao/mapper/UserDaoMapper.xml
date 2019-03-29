@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--命名空间指明了在哪个类下,此类名可以不用与本配置文件相同 -->
+<mapper namespace="com.syc.user_dao.UserDao">
+	<!--自定义结果集 stuMap;type要么是在总配置中的别名,那么就是实体类的全路径名com.syc -->
+	<!-- 设置一个结果集,并给它取个名,方便查询操作调用 -->
+	<resultMap id="userMap" type="User">
+		<result column="sex" />
+		<result column="realname" />
+		<result column="address" />
+		<result column="question" />
+		<result column="answer" />
+		<result column="email" />
+		<result column="favorate" />
+		<result column="score" />
+		<result column="regdate" />
+		<result column="status" />
+	</resultMap>
+	<!--自定义的字段组,用于共享字段 -->
+	<sql id="share_List">
+		id,username,password
+	</sql>
+	<!-- 实现注册用户的操作 -->
+	<insert id="ins">
+		insert into user_info
+		values(#{realname,jdbcType=VARCHAR2},#{sex,jdbcType=VARCHAR2},#{address,jdbcType=VARCHAR2},#{question,jdbcType=VARCHAR2},#{answer,jdbcType=VARCHAR2},#{email,jdbcType=VARCHAR2},#{favorate,jdbcType=VARCHAR2},#{score,jdbcType=NUMERIC},#{regdate,jdbcType=VARCHAR2},#{status,jdbcType=NUMERIC})
+	</insert>
+	<insert id="reg">
+	  insert into user_info(username,password) values(
+	  #{id},#{username},#{password}
+	  )
+	 </insert>
+
+</mapper>
